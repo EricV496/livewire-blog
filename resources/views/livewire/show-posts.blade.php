@@ -13,13 +13,19 @@
             <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                     <tr>
-                        <th scope="col" class="px-6 py-3">
+                        <th scope="col" class="cursor-pointer px-6 py-3"
+                            wire:click="order('id')"
+                        >
                             ID
                         </th>
-                        <th scope="col" class="px-6 py-3">
+                        <th scope="col" class="cursor-pointer px-6 py-3"
+                            wire:click="order('title')"
+                        >
                             Title
                         </th>
-                        <th scope="col" class="px-6 py-3">
+                        <th scope="col" class="cursor-pointer px-6 py-3"
+                            wire:click="order('content')"
+                        >
                             Content
                         </th>
                         <th scope="col" class="px-6 py-3">
