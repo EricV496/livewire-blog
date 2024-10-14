@@ -3,11 +3,16 @@
 namespace App\Livewire;
 
 use Livewire\Component;
-
+use App\Models\Post;
 class ShowPosts extends Component
 {
+    public $search;
     public function render()
     {
-        return view('livewire.show-posts');
+        $posts = Post::where('title', 'like', '%' . $this->search . '%')
+                        ->orwhere('content', 'like', '%' . $this->search . '%')
+                        ->get();
+        return view('livewire.show-posts', compact('posts'))
+                ->layout('layouts.app');
     }
 }
