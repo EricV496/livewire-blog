@@ -7,8 +7,9 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         
         <div class="relative overflow-x-auto">
-            <div class="px-6 py-4">
-                <x-input class="w-full" placeholder="Escriba el texto a buscar" type="text" wire:model.live="search"/>
+            <div class="px-6 py-4 flex items-center">
+                <x-input class="flex-1 mr-4" placeholder="Escriba el texto a buscar" type="text" wire:model.live="search"/>
+                @livewire('create-post')
             </div>
             <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
