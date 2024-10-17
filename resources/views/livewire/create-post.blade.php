@@ -10,11 +10,19 @@
         <x-slot name="content">
             <div class="mb-4">
                 <x-label value="Título del Post" />
-                <x-input type="text" class="w-full" wire:model="title"/>
+                <x-input type="text" class="w-full" wire:model.live="title"/>
+                
+                @error('title')
+                    <x-input-error for="title" />
+                @enderror
             </div>
             <div class="mb-4">
                 <x-label value="Contenido del Post" />
                 <textarea name="content" cols="30" rows="6" class="form-control w-full" wire:model="content"></textarea>
+                
+                @error('content')
+                    <x-input-error for="content" />
+                @enderror
             </div>
         </x-slot>
         <x-slot name="footer">
